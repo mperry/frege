@@ -208,8 +208,13 @@ frege/compiler/grammar/Frege.fr: frege/compiler/grammar/Frege.y
 	$(YACC) -v frege/compiler/grammar/Frege.y
 	$(FREGE) -cp fregec.jar frege.tools.YYgen -m State  frege/compiler/grammar/Frege.fr
 
+grammar: frege/compiler/grammar/Frege.y
+	$(YACC) -v frege/compiler/grammar/Frege.y
+
 frege/Version.fr: .git/index
 	perl scripts/mkversion.pl >frege/Version.fr
+
+version: frege/Version.fr
 
 $(COMPF)/Main.class: compiler2
 	( test -d $(DIR) -a $(COMPF2)/Main.class -nt $(COMPF)/Main.class && rm -rf $(COMPF) $(TOOLSF) $(DIR)/prelude ) || true
@@ -259,6 +264,8 @@ CLASSES  =       $(COMPF1)/Scanner.class   $(COMPF1)/Classtools.class \
 compiler1: frege/compiler/grammar/Frege.fr frege/Version.fr 
 	$(FREGEC0)  -make frege.compiler.Main
 	@echo stage 1 compiler ready
+
+
 
 runtime:
 	mkdir -p build
