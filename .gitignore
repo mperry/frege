@@ -58,6 +58,7 @@ local.properties
 *.iml
 .idea
 .loadpath
+.gradle
 
 # External tool builders
 .externalToolBuilders/
