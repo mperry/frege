@@ -21,6 +21,8 @@
 //    sourceDirs = ["$projectDir/shadow", "$projectDir"]
 //}
 
+defaultTasks "build"
+
 allprojects {
 
 }
