@@ -34,10 +34,10 @@ doc/Language.bbl
 doc/Language.blg
 doc/Language.synctex.gz
 ### frege sources generated in the course of compiler making
-frege/Version.fr
+#frege/Version.fr
 ### Misc
 y.*
-frege/Scrap.fr
+#frege/Scrap.fr
 shadow/META-INF/
 
 #################
