@@ -19,8 +19,11 @@ allprojects {
 }
 
 subprojects {
+
     apply plugin: 'java'
     apply plugin: "org.frege-lang"
+
+    defaultTasks "build"
 
     repositories {
         mavenLocal()
@@ -28,7 +31,7 @@ subprojects {
     }
 
     dependencies {
-        compile 'org.slf4j:slf4j-api:1.7.12'
+//        compile 'org.slf4j:slf4j-api:1.7.12'
 //        compile "org.frege-lang:frege:3.22.367-g2737683"
         compile "org.frege-lang:frege:3.23.288-gaa3af0c"
 
@@ -38,6 +41,8 @@ subprojects {
     compileFrege {
         hints = true
         verbose = true
+
+        allJvmArgs = ["-Xss4m", "-Xmx1800m"]
     }
 
 }

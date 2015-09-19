@@ -1,5 +1,16 @@
 
 dependencies {
-    compile project(":shadow")
+//    compile project(":shadow")
     compile project(":runtime")
 }
+
+compileFrege {
+    hints = true
+    verbose = true
+    sourcePaths = [file("$projectDir/../shadow/src/main/frege"), file("$projectDir/src/main/frege")]
+    prefix = "a"
+    module = "$projectDir/src/main/frege"
+//    module = "$projectDir/src/main/frege/frege/data/Char.fr"
+    allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+}
+
