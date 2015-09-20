@@ -1,4 +1,4 @@
 -- automatically created with scripts/mkversion.pl
 -- based on git describe
 package frege.Version where
-    version = "3.23.340-g5bc705d"
+    version = "3.23.330-g34c970f"
