@@ -1,0 +1,24 @@
+
+dependencies {
+//    compile project(":shadow")
+    compile project(":runtime")
+}
+
+compileFrege {
+    hints = true
+    verbose = true
+    sourcePaths = [file(shadowSrc), file(mainSrc)]
+    prefix = "a"
+//    module = mainSrc
+    module = "frege.compiler.Main"
+//    module = "$projectDir/src/main/frege/frege/data/Char.fr"
+    allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+}
+
+task createParser(type:JavaExec) {
+    main = "frege.tools.YYgen"
+//    classpath = sourceSets.main.runtimeClasspath
+    classpath = sourceSets.main.compileClasspath
+    args = ["-m", "State", "$mainSrc/frege/compiler/grammar/Frege.fr"]
+    workingDir = rootDir
+}

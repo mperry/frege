@@ -1,5 +1,5 @@
 
 rootProject.name = 'frege'
 
-include "runtime", "shadow", "main"
+include "runtime", "shadow", "main", "compiler1", "compiler2", "compiler3"
 
