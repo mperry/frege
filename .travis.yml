@@ -6,4 +6,6 @@ jdk:
   - oraclejdk7
 
 script:
-  - ./gradlew
+  - chmod +x ./gradlew
+  - ./gradlew build -x compileTestFrege
+

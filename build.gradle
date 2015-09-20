@@ -25,6 +25,12 @@ subprojects {
 
     defaultTasks "build"
 
+    ext {
+        mainSrc = srcDir("main")
+        shadowSrc = srcDir("shadow")
+    }
+
+
     repositories {
         mavenLocal()
         mavenCentral()
@@ -41,8 +47,11 @@ subprojects {
     compileFrege {
         hints = true
         verbose = true
-
         allJvmArgs = ["-Xss4m", "-Xmx1800m"]
     }
 
+}
+
+String srcDir(String module) {
+    "$rootDir/$module/src/main/frege"
 }

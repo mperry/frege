@@ -7,9 +7,9 @@ dependencies {
 compileFrege {
     hints = true
     verbose = true
-    sourcePaths = [file("$projectDir/../shadow/src/main/frege"), file("$projectDir/src/main/frege")]
+    sourcePaths = [file(shadowSrc), file(mainSrc)]
     prefix = "a"
-    module = "$projectDir/src/main/frege"
+    module = mainSrc
 //    module = "$projectDir/src/main/frege/frege/data/Char.fr"
     allJvmArgs = ["-Xss4m", "-Xmx1800m"]
 }
