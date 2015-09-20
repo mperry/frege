@@ -15,3 +15,10 @@ compileFrege {
     allJvmArgs = ["-Xss4m", "-Xmx1800m"]
 }
 
+task createParser(type:JavaExec) {
+    main = "frege.tools.YYgen"
+//    classpath = sourceSets.main.runtimeClasspath
+    classpath = sourceSets.main.compileClasspath
+    args = ["-m", "State", "$mainSrc/frege/compiler/grammar/Frege.fr"]
+    workingDir = rootDir
+}
