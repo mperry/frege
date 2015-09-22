@@ -1,6 +1,7 @@
 
 dependencies {
     compile fregeCompile
+//    compile project(":compiler3")
 }
 
 apply plugin: "org.frege-lang"

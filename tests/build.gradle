@@ -1,0 +1,12 @@
+
+dependencies {
+    compile project(":compiler3")
+//    compile fregeCompile
+}
+
+apply plugin: "org.frege-lang"
+
+compileTestFrege {
+    verbose = true
+    module = "$projectDir/src/test/frege"
+}
