@@ -12,7 +12,7 @@ compileFrege {
     sourcePaths = [file(shadowSrc), file(mainSrc)]
     prefix = "a"
     module = "frege.compiler.Main"
-    allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+    allJvmArgs = fregeJvmArgs
 }
 
 task createParser(type:JavaExec) {

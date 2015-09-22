@@ -15,4 +15,5 @@ compileFrege {
     module = "$projectDir/src/main/frege"
 //    sourcePaths = ["$rootDir/main/src/main/frege"]
     sourcePaths = [file(mainSrc)]
+    allJvmArgs = fregeJvmArgs
 }

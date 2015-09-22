@@ -13,5 +13,5 @@ compileFrege {
     inline = true
     prefix = "b"
     module = "$mainSrc/frege/compiler/Main.fr"
-    allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+    allJvmArgs = fregeJvmArgs
 }

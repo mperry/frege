@@ -18,5 +18,5 @@ compileFrege {
     inline = true
     optimize = true
     module = "$mainSrc/frege/compiler/Main.fr" // TODO: plus frege/StandardTools.fr
-    allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+    allJvmArgs = fregeJvmArgs
 }

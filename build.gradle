@@ -28,6 +28,7 @@ subprojects {
         mainSrc = srcDir("main")
         shadowSrc = srcDir("shadow")
         fregeCompile = "org.frege-lang:frege:3.23.288-gaa3af0c"
+        fregeJvmArgs = ["-Xss4m", "-Xmx1800m"]
     }
 
 
