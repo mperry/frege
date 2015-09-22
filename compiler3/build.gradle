@@ -13,16 +13,10 @@ apply plugin: "org.frege-lang"
 compileFrege {
     hints = true
     verbose = true
-//    sourcePaths = [file(shadowSrc), file(mainSrc)]
     sourcePaths = [file(mainSrc)]
-//    fregePaths = ""
     mainClass = "bfrege.compiler.Main"
-//    module = mainSrc
     inline = true
     optimize = true
-//    prefix = "b"
     module = "$mainSrc/frege/compiler/Main.fr" // TODO: plus frege/StandardTools.fr
-//    module = "$projectDir/src/main/frege/frege/data/Char.fr"
     allJvmArgs = ["-Xss4m", "-Xmx1800m"]
 }
-
