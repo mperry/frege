@@ -9,5 +9,5 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew build -x test -i
+  - ./gradlew clean build -i
 
