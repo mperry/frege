@@ -20,3 +20,7 @@ compileTestFrege {
     sourcePaths = [file(mainSrc)]
     allJvmArgs = fregeJvmArgs
 }
+
+fregeQuickCheck {
+    verbose = true
+}
