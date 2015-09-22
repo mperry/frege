@@ -2,8 +2,10 @@
 
 dependencies {
     compile project(":compiler1")
-    compile project(":runtime")
+//    compile project(":runtime")
 }
+
+apply plugin: "org.frege-lang"
 
 compileFrege {
     hints = true

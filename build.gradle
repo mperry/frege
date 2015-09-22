@@ -21,7 +21,7 @@ allprojects {
 subprojects {
 
     apply plugin: 'java'
-    apply plugin: "org.frege-lang"
+//    apply plugin: "org.frege-lang"
 
     defaultTasks "build"
 
@@ -45,11 +45,11 @@ subprojects {
         testCompile 'junit:junit:4.12'
     }
 
-    compileFrege {
-        hints = true
-        verbose = true
-        allJvmArgs = ["-Xss4m", "-Xmx1800m"]
-    }
+//    compileFrege {
+//        hints = true
+//        verbose = true
+//        allJvmArgs = ["-Xss4m", "-Xmx1800m"]
+//    }
 
 }
 

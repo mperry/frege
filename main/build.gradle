@@ -5,6 +5,8 @@ dependencies {
     compile fregeCompile
 }
 
+apply plugin: "org.frege-lang"
+
 compileFrege {
     hints = true
     verbose = true
