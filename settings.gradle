@@ -1,6 +1,6 @@
 
 rootProject.name = 'frege'
 
-include "runtime", "compiler1", "compiler2", "compiler3", "examples"
-//include "runtime", "compiler1", "compiler2", "compiler3", "examples", "tests"
+//include "runtime", "compiler1", "compiler2", "compiler3", "examples"
+include "runtime", "compiler1", "compiler2", "compiler3", "examples", "tests"
 

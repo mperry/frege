@@ -16,6 +16,7 @@ apply plugin: "org.frege-lang"
 
 compileTestFrege {
     verbose = true
-    module = "$projectDir/src/test/frege"
+    module = "$projectDir/src/test/frege/tests/qc"
+    sourcePaths = [file(mainSrc)]
     allJvmArgs = fregeJvmArgs
 }

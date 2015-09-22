@@ -15,7 +15,7 @@ compileFrege {
     verbose = true
     sourcePaths = [file(mainSrc)]
     mainClass = "bfrege.compiler.Main"
-    inline = true
+//    inline = true
     optimize = true
     module = "$mainSrc/frege/compiler/Main.fr" // TODO: plus frege/StandardTools.fr
     allJvmArgs = fregeJvmArgs
