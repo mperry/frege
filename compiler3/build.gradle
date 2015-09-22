@@ -1,7 +1,11 @@
 
 dependencies {
-    compile project(":runtime")
-    compile project(":compiler2")
+    compile (project(":runtime")) {
+        exclude module: 'frege'
+    }
+    compile (project(":compiler2")) {
+        exclude module: 'frege'
+    }
 }
 
 compileFrege {

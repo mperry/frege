@@ -1,4 +1,5 @@
 
 dependencies {
     compile project(":runtime")
+    compile fregeCompile
 }
