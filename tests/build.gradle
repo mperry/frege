@@ -1,7 +1,15 @@
 
 dependencies {
-    compile project(":compiler3")
-//    compile fregeCompile
+    compile(project(":compiler3")) {
+        transitive = false
+    }
+    compile project(":runtime")
+
+//    testCompile fregeCompile
+    testCompile project(":runtime")
+    testCompile(project(":compiler3")) {
+        transitive = false
+    }
 }
 
 apply plugin: "org.frege-lang"
