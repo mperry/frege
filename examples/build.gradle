@@ -17,3 +17,7 @@ compileFrege {
     sourcePaths = [file(mainSrc)]
     allJvmArgs = fregeJvmArgs
 }
+
+compileTestFrege {
+    enabled = false
+}

@@ -15,3 +15,8 @@ compileFrege {
     module = "$mainSrc/frege/compiler/Main.fr"
     allJvmArgs = fregeJvmArgs
 }
+
+
+compileTestFrege {
+    enabled = false
+}

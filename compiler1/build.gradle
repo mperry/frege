@@ -15,6 +15,10 @@ compileFrege {
     allJvmArgs = fregeJvmArgs
 }
 
+compileTestFrege {
+    enabled = false
+}
+
 task createParser(type:JavaExec) {
     main = "frege.tools.YYgen"
 //    classpath = sourceSets.main.runtimeClasspath

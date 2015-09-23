@@ -23,6 +23,10 @@ compileFrege {
     allJvmArgs = fregeJvmArgs
 }
 
+compileTestFrege {
+    enabled = false
+}
+
 task tools(type: CompileTask) {
     hints = true
     verbose = true

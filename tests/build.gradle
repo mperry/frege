@@ -22,6 +22,6 @@ compileTestFrege {
 }
 
 fregeQuickCheck {
-    verbose = true
+    verbose = false
     allJvmArgs = fregeJvmArgs
 }
