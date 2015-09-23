@@ -3,10 +3,10 @@ import frege.gradle.CompileTask
 
 dependencies {
     compile (project(":runtime")) {
-        exclude module: 'frege'
+        transitive = false
     }
     compile (project(":compiler2")) {
-        exclude module: 'frege'
+        transitive = false
     }
 }
 
