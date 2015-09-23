@@ -11,7 +11,7 @@ compileFrege {
     verbose = true
     sourcePaths = [file(shadowSrc), file(mainSrc)]
     prefix = "a"
-    module = "frege.compiler.Main"
+    module = mainSrc
     allJvmArgs = fregeJvmArgs
 }
 

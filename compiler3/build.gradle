@@ -17,9 +17,8 @@ compileFrege {
     verbose = true
     sourcePaths = [file(mainSrc)]
     mainClass = "bfrege.compiler.Main"
-//    inline = true
     optimize = true
-    module = "$mainSrc/frege/compiler/Main.fr" // TODO: plus frege/StandardTools.fr
+    module = mainSrc
     allJvmArgs = fregeJvmArgs
 }
 
@@ -31,10 +30,10 @@ task tools(type: CompileTask) {
     hints = true
     verbose = true
     sourcePaths = [file(mainSrc)]
+    fregePaths = [file("$buildDir/classes/main")]
     mainClass = "bfrege.compiler.Main"
-//    inline = true
     optimize = true
-    module = "$mainSrc/frege/StandardTools.fr" // TODO: plus frege/StandardTools.fr
+    module = mainSrc
     allJvmArgs = fregeJvmArgs
 }
 

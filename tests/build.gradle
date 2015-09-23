@@ -5,7 +5,6 @@ dependencies {
     }
     compile project(":runtime")
 
-//    testCompile fregeCompile
     testCompile project(":runtime")
     testCompile(project(":compiler3")) {
         transitive = false
@@ -17,7 +16,6 @@ apply plugin: "org.frege-lang"
 compileTestFrege {
     verbose = true
     module = "$projectDir/src/test/frege/tests/qc"
-    sourcePaths = [file(mainSrc)]
     allJvmArgs = fregeJvmArgs
 }
 

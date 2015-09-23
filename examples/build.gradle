@@ -1,20 +1,15 @@
 
 dependencies {
-//    compile fregeCompile
     compile project(":runtime")
     compile (project(":compiler3")) {
         transitive = false
     }
-
 }
 
 apply plugin: "org.frege-lang"
 
 compileFrege {
     verbose = true
-    module = "$projectDir/src/main/frege"
-//    sourcePaths = ["$rootDir/main/src/main/frege"]
-    sourcePaths = [file(mainSrc)]
     allJvmArgs = fregeJvmArgs
 }
 
